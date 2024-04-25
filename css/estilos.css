@@ -228,6 +228,11 @@ body{
     margin: 10px;
     border: 0px solid rgba(52, 69, 10, 0.53) ;
 }
+.btn-css a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .btn-css:hover{
     background-color:white;
     color:rgba(52, 69, 10, 0.7);
@@ -235,6 +240,7 @@ body{
     font-family: 'Dosis';
     border-radius: 10px;
     width: 180px;
+
 }
 /*------------------------------------------Encabezado------------------------------------------*/
 footer{

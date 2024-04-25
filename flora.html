@@ -3,45 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/flora.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fauna.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Handlee&family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/flora.png">
+    <script src="https://kit.fontawesome.com/531ac7ac07.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>   
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Flora</title>
 </head>
 <body>
-    <div class="containerInformacion">
-        <h1>
-            
-        </h1>
-        <ol>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <img src="img/Logotipo.svg" alt="Logo"  width="50" height="auto" loading="lazy">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#fauna">Fauna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#flora">Flora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#ecoturismo">Ecoturismo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#turismo">Turismo</a>
+                    </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" action="/action_page.php" >
+                        <div class="input-group" width="190">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                </nav>
+    </header>
+    <main>
+        <section  class="containerCarrusel">
+            <div class="titulo">
+            <h2>Flora</h2>
+        </div>
+        <div class="containerCarrusel">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="card">
+                        <img src="img/Flora1.png" alt="Placeholder Image">
+                        <h3>Card 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/Flora2.png" alt="Placeholder Image">
+                        <h3>Card 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                        <h3>Card 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                        <h3>Card 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                        <h3>Card 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                        <h3>Card 6</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+                        <h3>Card 7</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="containerCategoria"  class="containerCategoria">
+        <div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <i class="fa-solid fa-crow"></i>
+                        <a data-toggle="collapse" href="#collapse1">Aves</a>
+                    </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <button class="boton" onclick="informacion()">Golondrina ventriparda</button>
+                        </li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                    <div class="panel-footer"><i class="fa-solid fa-crow"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <i class="fa-solid fa-frog"></i>
+                        <a data-toggle="collapse" href="#collapse1">Anfibios</a>
+                    </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">One</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                    <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <i class="fa-solid fa-otter"></i>
+                        <a data-toggle="collapse" href="#collapse1">Mamiferos</a>
+                    </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">One</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                    <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <i class="fa-solid fa-staff-snake"></i>
+                        <a data-toggle="collapse" href="#collapse1">Reptiles</a>
+                    </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">One</li>
+                        <li class="list-group-item">Two</li>
+                        <li class="list-group-item">Three</li>
+                    </ul>
+                    <div class="panel-footer">Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="containerInformacion">
+            <div class="containerInformacion">
+                <h1>
+                    <p>Golondria ventriparda</p>
+                </h1>
+                <img src="img/Pfauna1.jpg" alt="Golondrina">
+                <ol>
+                    </li>
+                    <li>Nombre Cientifico
+                        <p>Orochelidon murina</p>
+                    </li>
+                    <li>Familia
+                        <p>Hirundinidae</p>
+                    </li>
+                    <li>Genero
+                        <p>Orochelidon</p>
+                    </li>
+                    <li>Especie
+                        <p>O. murina</p>
+                    </li>
+                    <li>Descripcion
+                        <p>La golondrina parda es una golondrina de tamaño mediano, mide alrededor de 13 cm de longitud. Tiene un color marrón grisáceo en el dorso, con el vientre de color más claro.</p>
+                    </li>
+                    <li>Habitat
+                        <p>Esta especie habita en zonas de bosque, matorrales y áreas urbanas. Se encuentra en América del Sur, desde Colombia y Venezuela hasta el norte de Argentina y Uruguay</p>
+                    </li>
+                    <li>Alimentacion
+                        <p>Se alimenta principalmente de insectos que captura en vuelo, como moscas, mosquitos y otros insectos pequeños.</p>
+                    </li>
+                    <li>Reproduccion
+                        <p>Construye su nido con barro y otras materias en forma de cuenco, generalmente en repisas o salientes de edificaciones. La hembra pone entre 2 y 4 huevos, que son incubados principalmente por la hembra durante unas dos semanas.</p>
+                    </li>
+                    <li>Comportamiento
+                        <p>Es una especie migratoria, que se desplaza hacia el norte durante la temporada de reproducción y hacia el sur durante el invierno. Es conocida por su vuelo ágil y sus largas migraciones.</p>
+                    </li>
+                    <li>Ubicacion
+                        <div id="map"></div>
+                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                        <!-- Tu script personalizado para configurar el mapa -->
+                        <script src="js/script.js"></script>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="text-center text-lg-start"  style="background-color: rgba(52, 69, 10, 0.7);">
+        <!-- Grid container -->
+        <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Explora Tocancipá</h5>
+    
+            <p>
+                Descubre la riqueza natural y cultural de Tocancipá a través de nuestra página, donde te invitamos a explorar la biodiversidad única de la región, desde sus exuberantes bosques hasta sus coloridos humedales. Embárcate en una aventura inolvidable mientras descubres la magia de Tocancipá.
+            </p>
+        </div>
+        <!--Grid column-->
+    
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">En colaboración con:</h5>
 
-            </li>
-            <li>Nombre Cientifico
-                <p></p>
-            </li>
-            <li>Familia
-                <p></p>
-            </li>
-            <li>Genero
-                <p></p>
-            </li>
-            <li>Especie
-                <p></p>
-            </li>
-            <li>Descripcion
-                <p></p>
-            </li>
-            <li>Habitat
-                <p></p>
-            </li>
-            <li>Alimentacion
-                <p></p>
-            </li>
-            <li>Reproduccion
-                <p></p>
-            </li>
-            <li>Comportamietno
-                <p></p>
-            </li>
-        </ol>
+        </div>
+        <!--Grid column-->
+        </div>
+        <!--Grid row-->
     </div>
+    <!-- Grid container -->
+    
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright: MishifusCorp 
+    </div>
+    <!-- Copyright -->
+    </footer>
 </body>
 </html>
